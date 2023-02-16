@@ -1,0 +1,45 @@
+body{
+    background: #1d2630;
+}
+*{
+    color: #fff;
+}
+
+#Update{
+    display: none;
+}
+
+#sort{
+    height: 30px;
+    width: 130px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    margin: 5px;
+    background-color:skyblue;
+    color: white;
+}
+
+#sort option{
+    background-color:#1d2630;
+    /* color: white; */
+}
+
+#sort option:hover{
+    background-color: green;
+}
+
+#sort option:visited{
+    background-color: white;
+}
+#sort option:active{
+    background-color: white;
+}
+
+#sortbtn{
+    background-color: #1d2630;
+}
+
+#sortbtn span{
+    font-size: 20px;
+}

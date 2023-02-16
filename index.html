@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-5 mb-5 text-center">CRUD Operation in Javascript</h2>
+        <div class="mb-5">
+            <div class="row">
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="productid">Product ID</label>
+                    <input type="number" name="pid" class="form-control" id="pid" placeholder="Enter Product ID">
+                </div>
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="productname">Product Name</label>
+                    <input type="text" name="pname" class="form-control" id="pname" placeholder="Enter Product Name">
+                </div>
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="productimage">Product Image</label>
+                    <input type="file" class="form-control" id="pimage">
+                </div>
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="address">Product Price</label>
+                    <input type="text" name="pprice" class="form-control" id="pprice" placeholder="Enter Product Price">
+                </div>
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="email">Product Description</label>
+                    <input type="text" name="pdescription" class="form-control" id="pdescription"
+                        placeholder="Enter Product Description">
+                </div>
+                <div class="col-lg-12 mt-3 text-center">
+                    <button class="btn btn-success" id="Submit" onclick="AddProduct()">Add Data</button>
+                    <button class="btn btn-primary" id="Update" >Update Data</button>
+                </div>
+
+            </div>
+            <div class="form-group col-md-6 mb-3 mt-3 align-items-center">
+                <label for="productid">FILTER</label>
+
+                <input type="text" name="filter" class="form-control" id="filter" onkeyup="filterProduct()"
+                    placeholder="Enter Product ID to filter....">
+
+
+                <button class="btn btn-primary mt-3" id="sortbtn"><span>SortBy : </span>
+                    <select name="sort" id="sort" onchange="sortProduct()" style="color:black">
+                        <option selected disabled>Select</option>
+                        <option value="spid">Product ID</option>
+                        <option value="spname">Product Name</option>
+                        <option value="spprice">Product Price</option>
+                    </select>
+                </button>
+            </div>
+
+            <hr>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <table class="table table-bordered" id="crudTable">
+                        <thead>
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Product Name</th>
+                                <th>Product Image</th>
+                                <th>Product Price</th>
+                                <th>Product Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="myscript.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
